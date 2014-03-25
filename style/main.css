@@ -21,6 +21,12 @@ h1.title {
   margin: 0;
   display: block;
   float: left; }
+  h2.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  display: block;
+  float: left; }
 
 @-webkit-keyframes move-up {
   0% {
@@ -591,6 +597,9 @@ hr {
     padding: 0 20px; }
 
   h1.title {
+    font-size: 27px;
+    margin-top: 15px; }
+    h2.title {
     font-size: 27px;
     margin-top: 15px; }
 
