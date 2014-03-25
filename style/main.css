@@ -118,6 +118,10 @@ a {
 strong.important {
   text-transform: uppercase; }
 
+ strong.important2 {
+  text-transform: uppercase;
+  color:#FF0000 }
+
 hr {
   border: none;
   border-bottom: 1px solid #d8d4d0;
