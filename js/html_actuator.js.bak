@@ -168,6 +168,8 @@ HTMLActuator.prototype.message = function (won) {
 
 
 
+
+
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
   var message = won ? "你摸出了<strong>沉沙玄晶</strong>恭喜你！" : mytxt[text3(maxscore)-3];
