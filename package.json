@@ -1,9 +1,9 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
+    "name": "qq1012803704-blog",
+    "title": "qq1012803704 Blog",
+    "author": "qq1012803704 <qq1012803704@gmail.com>",
     "version": "1.7.0",
-    "homepage": "http://qq1012803704.github.io/",
+    "homepage": "http://qq1012803704.github.io",
     "repository": {
         "type": "git",
         "url": "https://github.com/qq1012803704/qq1012803704.github.io"
