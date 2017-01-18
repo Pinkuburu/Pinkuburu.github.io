@@ -2,7 +2,7 @@
 layout: page
 title: "About"
 description: "Hey, this is Hux."
-header-img: "img/about-bg.jpg"
+header-img: "img/404-bg.jpg"
 ---
 
 <!-- Language Selector -->
@@ -56,7 +56,7 @@ header-img: "img/about-bg.jpg"
     <li><a href="//huangxuan.me/2015/07/09/js-module-7day/">JavaScript Modularization Journey · 2015</a></li>
     </ul>
 </div>
-
+-->
 <!-- Handle Language Change -->
 <script type="text/javascript">
     // get nodes
