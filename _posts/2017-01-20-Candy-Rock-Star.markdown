@@ -70,6 +70,7 @@ http://unity-chan.com/
 **Unity Technologies Japan, G.K. holds and maintains copyright on these works.**
 
 **You have permission to redistribute them, and any changes,improvements or performances thereof, under the terms of the Unity-Chan License.**
-<img src="http://qq1012803704.github.io/img/qrcode.jpg" width="350" height="350"/>
-
+ 
+--------
 <small class="img-hint">欢迎关注我的微信公众号，获得更多游戏开发技术分享</small>
+<img src="http://qq1012803704.github.io/img/qrcode.jpg" width="350" height="350"/>
