@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Candy Rock Star"
-subtitle: "Unity-Chan Concert Project"
+title: "糖果摇滚巨星"
+subtitle: "Candy Rock Star：Unity-Chan Concert Project"
 date: 2017-01-20
 author: "邱陈程"
 header-img: "img/title/title2017-01-20.jpg"
@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![enter image description here](img/inpost/2017-01-20post01.jpg)
+![unity-chan](.img/inpost/2017-01-20post01.jpg)
 
 Unity是Unity Technologies开发的著名跨平台游戏引擎，Unity娘是日本官方发布的拟人萌娘和开源项目。
 
