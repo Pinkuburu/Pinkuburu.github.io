@@ -67,6 +67,6 @@ unity-chan@unity3d.co.jp
 “unity-chan! Official Website”
 http://unity-chan.com/
 
-**Unity Technologies Japan, G.K. holds and maintains copyright on these works. 
+**Unity Technologies Japan, G.K. holds and maintains copyright on these works. **
 
-**You have permission to redistribute them, and any changes,improvements or performances thereof, under the terms of the Unity-Chan License.
+**You have permission to redistribute them, and any changes,improvements or performances thereof, under the terms of the Unity-Chan License.**
