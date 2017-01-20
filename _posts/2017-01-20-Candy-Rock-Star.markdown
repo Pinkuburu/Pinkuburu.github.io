@@ -55,9 +55,9 @@ http://unity-chan.com/download/license_sig_en.html
 此项目包括以下CD中的歌曲
 “UNITE IN THE SKY”，在Comic Market 86出售：
 
-*UNITE IN THE SKY
-*Twilight
-*HelloUnity.js
+\*UNITE IN THE SKY
+\*Twilight
+\*HelloUnity.js
 
 ## 查询/联系人：
 Unity Technologies Japan, G.K.
