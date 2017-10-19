@@ -1,11 +1,11 @@
 # Site settings
-title: Qcc Blog
-SEOTitle: 邱陈程的博客 | Qcc Blog
+title: Pinkuburu Blog
+SEOTitle: 邱陈程的博客 | Pinkuburu Blog
 header-img: img/home-bg.jpg
 email: 1012803704@qq.com
 description: "关于Unity开发，游戏开发，Unreal，虚幻4，美术，手绘，3D美术，渲染技术"
-keyword: "邱陈程, acghongniu"
-url: "https://qq1012803704.github.io"              # your host, for absolute URL
+keyword: "邱陈程, pinkuburu"
+url: "https://pinkuburu.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -14,8 +14,8 @@ baseurl: ""                             # for example, '/blog' if your blog host
 RSS: false
 weibo_username:     acghongniu
 zhihu_username:     he-hong-niu-you-li-liang
-github_username:    qq1012803704
-twitter_username:  acghongniu
+github_username:    Pinkuburu
+twitter_username:  Pinkuburu
 facebook_username:  profile.php?id=100003134645551
 linkedin_username:  陈程-邱-9ab8a4a3
 
