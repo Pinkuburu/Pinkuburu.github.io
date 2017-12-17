@@ -1,0 +1,56 @@
+##Add:
+
+equipment delimiter standardization ^ (check rogue equip)
+background unique properties (specialty, etc.)
+spells & descriptions on sheet (cleric, etc)
+
+styling
+check on mending & other spells on phb!
+
+make sure all fields are ediable without entry (height, weight,etc.)
+
+##Low Prior
+- Tooltip on sheet for how it was calculated
+- tooltips for things (kits, skills, etc.)
+- Spreadsheet export
+- Save html (instructions?)
+- hide spells not available in basic (based on * probably)
+- labels on sheet skill checkbox
+
+##Problems:
+
+
+
+##!DONE!
+saving throw delimiter standardization ^ - DONE
+Top nav bar on sheet and some info on front page - DONE
+fix light/detect magic (any duplicates) that (id is duplicated on wizard) - DONE
+add/remove list elements - DONE
+test rogue expertise - DONE
+editable jquery stats on sheet (STR DEX, etc) - DONE
+skills checkboxes - DONE
+class not displayed on sheet - FIXED
+age / weight / height dont go on sheet - FIXED
+add _blank to buy link - DONE
+changing race after class/stat selection won't update hp/stats accurately - FIXED
+draggable outside of range on mobile - FIXED
+alignment doesn't work with show() (works on mobile thought) - FIXED
+alert validations - DONE
+rogue expertises - DONE
+spell limiations - DONE
+remove drow elf - DONE
+Issue: Point buy won't update cleric spellcountm - FIXED
+Labels on class equipment - DONE
+changed pack values with pack contents - DONE
+cleric divine domain - DONE
+ac calulation - Not needed
+attack calculation - not necessary
+age/height/weight/xp number display on mobile - DONE
+hide parts of the form before selection is made - SOLVED/SKIPPED
+Extra race languages / extra bg languages - DONE
+subrace selection buttons change - DONE
+hp bonus (look for total_hp) - DONE
+put update in function for statArray bullshit DONE
+skill label hide DONE
+add bonus_str, bonus_atr to sheet DONE
+convert , to ^ for split DONE
