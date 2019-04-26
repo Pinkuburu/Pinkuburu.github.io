@@ -1,14 +1,14 @@
 {
-    "name": "qq1012803704-blog",
-    "title": "qq1012803704 Blog",
-    "author": "qq1012803704 <qq1012803704@gmail.com>",
+    "name": "pinkuburu-blog",
+    "title": "pinkuburu Blog",
+    "author": "pinkuburu <qq1012803704@gmail.com>",
     "version": "1.7.0",
-    "homepage": "http://qq1012803704.github.io",
+    "homepage": "http://pinkuburu.github.io",
     "repository": {
         "type": "git",
-        "url": "https://github.com/qq1012803704/qq1012803704.github.io"
+        "url": "https://github.com/pinkuburu/pinkuburu.github.io"
     },
-    "bugs": "https://github.com/qq1012803704/qq1012803704.github.io/issues",
+    "bugs": "https://github.com/pinkuburu/pinkuburu.github.io/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",
