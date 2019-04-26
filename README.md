@@ -1,2 +1,2 @@
-# qq1012803704.github.io
-剑三套装版的2048，剑三玩家玩的时候有智商加成
+# Pinkuburu.github.io
+偶尔写写
