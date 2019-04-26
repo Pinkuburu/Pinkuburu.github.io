@@ -19,11 +19,11 @@
   font-size: 14px;
 }
 .sidebar-container h5 {
-  color: #cccccc;
+  color: #808080;
   padding-bottom: 1em;
 }
 .sidebar-container h5 a {
-  color: #cccccc !important;
+  color: #808080 !important;
   text-decoration: none;
 }
 .sidebar-container a {
@@ -761,7 +761,7 @@ samp {
   width: 100%;
 }
 .post-container .pager li > a > span {
-  color: #cccccc;
+  color: #808080;
   font-weight: normal;
   letter-spacing: 0.5px;
 }
@@ -973,7 +973,7 @@ samp {
 }
 .intro-header {
   background: no-repeat center center;
-  background-color: #cccccc;
+  background-color: #808080;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1147,7 +1147,7 @@ samp {
 }
 .post-preview > .post-meta {
   font-family: 'Lora', 'Times New Roman', serif;
-  color: #cccccc;
+  color: #808080;
   font-size: 16px;
   font-style: italic;
   margin-top: 0;
@@ -1340,7 +1340,7 @@ form .row:first-child .floating-label-form-group {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #cccccc;
+  color: #808080;
   background-color: #404040;
   cursor: not-allowed;
 }
@@ -1428,7 +1428,7 @@ img::-moz-selection {
   line-height: 28px;
   margin: 0 2px;
   margin-bottom: 8px;
-  background: #f3f5f5;
+  background: #D6D6D6;
 }
 #tag_cloud a:hover,
 #tag_cloud .tag:hover,
