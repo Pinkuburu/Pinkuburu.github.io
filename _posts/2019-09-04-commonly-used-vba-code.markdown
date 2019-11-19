@@ -40,19 +40,17 @@ Sub 隐藏不需要关注的日服内容()
 '
 ' 快捷键: Ctrl+s
 '
-    Rows("6:6").Select
+    Rows("8:11").Select
     Selection.EntireRow.Hidden = True
-    Rows("8:9").Select
+    Rows("13:13").Select
     Selection.EntireRow.Hidden = True
-	Rows("13:14").Select
+	Rows("15:16").Select
     Selection.EntireRow.Hidden = True
-	Rows("20:24").Select
+	Rows("21:27").Select
     Selection.EntireRow.Hidden = True
-	Rows("27:29").Select
+	Rows("29:29").Select
     Selection.EntireRow.Hidden = True
-	Rows("34:41").Select
-    Selection.EntireRow.Hidden = True
-	Rows("43:43").Select
+	Rows("34:55").Select
     Selection.EntireRow.Hidden = True
 End Sub
 ```
