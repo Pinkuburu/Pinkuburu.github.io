@@ -23,11 +23,12 @@ Sub 隐藏美服不需要关注的内容()
     Selection.EntireRow.Hidden = True
     Rows("13:30").Select
     Selection.EntireRow.Hidden = True
-	Rows("32:32").Select
+    Rows("32:32").Select
     Selection.EntireRow.Hidden = True
-	Rows("34:35").Select
+    Rows("34:35").Select
     Selection.EntireRow.Hidden = True
 End Sub
+
 ```
 ```vb
 Sub 隐藏不需要关注的日服内容()
@@ -40,15 +41,20 @@ Sub 隐藏不需要关注的日服内容()
     Selection.EntireRow.Hidden = True
     Rows("13:13").Select
     Selection.EntireRow.Hidden = True
-	Rows("15:16").Select
+    Rows("15:16").Select
     Selection.EntireRow.Hidden = True
-	Rows("21:27").Select
+    Rows("21:28").Select
     Selection.EntireRow.Hidden = True
-	Rows("29:29").Select
+    Rows("30:30").Select
     Selection.EntireRow.Hidden = True
-	Rows("34:55").Select
+    Rows("35:47").Select
+    Selection.EntireRow.Hidden = True
+    Rows("49:55").Select
+    Selection.EntireRow.Hidden = True
+    Rows("57:57").Select
     Selection.EntireRow.Hidden = True
 End Sub
+
 ```
  
 --------
