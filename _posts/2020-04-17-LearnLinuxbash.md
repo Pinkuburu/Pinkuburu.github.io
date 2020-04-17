@@ -4,7 +4,7 @@ title: "Linux操作命令学习和备忘"
 subtitle: "工作中常用的Linux维护命令"
 date: 2020-04-17 19:19:53
 author: "邱陈程"
-header-img: "img/title/post-bg-css.jpg"
+header-img: "img/post-bg-css.jpg"
 tags:
 - Linux
 - bash
@@ -17,7 +17,7 @@ tags:
 
 sudo apt install g++
 
-- //git组件
+- git组件
 
 
 sudo apt install git
