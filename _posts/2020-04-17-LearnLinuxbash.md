@@ -150,5 +150,30 @@ unzip test.zip
 
 unzip -o test.zip -d tmp/
 
+- 修改Ubuntu的apt源
+sudo -i
+cp /etc/apt/sources.list /etc/apt/sources.list.backup
 
+sudo vim /etc/apt/sources.list
+- 再写入如下的aliyun源
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+- vim删除整行，直接按dd
+- Ubuntu修改DNS
