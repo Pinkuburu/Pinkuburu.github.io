@@ -176,4 +176,11 @@ deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe m
 
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 - vim删除整行，直接按dd
-- Ubuntu修改DNS
+- 添加docker用户组
+sudo groupadd docker  
+- 将登陆用户加入到docker用户组中
+sudo gpasswd -a $USER docker
+- 更新用户组
+newgrp docker
+- 测试docker命令是否可以使用sudo正常使用
+docker ps 
