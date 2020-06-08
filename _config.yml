@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: 1012803704@qq.com
 description: "关于Unity开发，游戏开发，Unreal，虚幻4，美术，手绘，3D美术，渲染技术"
 keyword: "邱陈程, pinkuburu, Unity, C#"
-url: "https://qiuchencheng.com/"              # your host, for absolute URL
+url: "https://pinkuburu.github.io/"              # your host, for absolute URL 
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
