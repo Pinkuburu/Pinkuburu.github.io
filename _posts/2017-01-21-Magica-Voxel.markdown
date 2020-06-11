@@ -40,5 +40,3 @@ tags:
 作者的twitter：[@ephtracy](https://twitter.com/ephtracy) 
 
 --------
-<small class="img-hint">欢迎关注我的微信公众号，获得更多游戏开发技术分享</small>
-<img src="https://pinkuburu.github.io/img/qrcode.jpg" width="350" height="350"/>

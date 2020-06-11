@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: 1012803704@qq.com
 description: "关于Unity开发，游戏开发，Unreal，虚幻4，美术，手绘，3D美术，渲染技术"
 keyword: "邱陈程, pinkuburu, Unity, C#"
-url: "https://pinkuburu.github.io/"              # your host, for absolute URL 
+url: "https://qiuchencheng.com/"              # your host, for absolute URL 
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -101,39 +101,8 @@ page-mathjax: false
 
 
 # Friends
-friends: [
-    {
+friends: [    
     #     title: "Su",
     #     href: "http://su.gallery/"
     # },{
-        title: "乱序",
-        href: "http://mida.re/"
-    },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
-    },{
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
-    }
 ]

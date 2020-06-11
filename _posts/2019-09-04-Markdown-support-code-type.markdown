@@ -217,5 +217,3 @@ markdown里面对代码块的引用语法是三个撇[```]，在后面增加语�
 </table>
 
 --------
-<small class="img-hint">欢迎关注我的微信公众号，获得更多游戏开发技术分享</small>
-<img src="https://pinkuburu.github.io/img/qrcode.jpg" width="350" height="350"/>

@@ -72,5 +72,3 @@ http://unity-chan.com/
 **You have permission to redistribute them, and any changes,improvements or performances thereof, under the terms of the Unity-Chan License.**
  
 --------
-<small class="img-hint">欢迎关注我的微信公众号，获得更多游戏开发技术分享</small>
-<img src="https://pinkuburu.github.io/img/qrcode.jpg" width="350" height="350"/>
