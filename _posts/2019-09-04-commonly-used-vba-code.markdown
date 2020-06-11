@@ -25,7 +25,9 @@ Sub 隐藏美服不需要关注的内容()
     Selection.EntireRow.Hidden = True
     Rows("32:32").Select
     Selection.EntireRow.Hidden = True
-    Rows("34:35").Select
+    Rows("34:34").Select
+    Selection.EntireRow.Hidden = True
+    Rows("36:37").Select
     Selection.EntireRow.Hidden = True
 End Sub
 
@@ -37,25 +39,21 @@ Sub 隐藏不需要关注的日服内容()
 '
 ' 快捷键: Ctrl+s
 '
-    Rows("8:11").Select
+    Rows("10:11").Select
     Selection.EntireRow.Hidden = True
-    Rows("13:13").Select
+    Rows("14:21").Select
     Selection.EntireRow.Hidden = True
-    Rows("15:16").Select
+    Rows("23:23").Select
     Selection.EntireRow.Hidden = True
-    Rows("21:28").Select
+    Rows("28:40").Select
     Selection.EntireRow.Hidden = True
     Rows("30:30").Select
     Selection.EntireRow.Hidden = True
-    Rows("35:47").Select
-    Selection.EntireRow.Hidden = True
-    Rows("49:55").Select
-    Selection.EntireRow.Hidden = True
-    Rows("57:57").Select
-    Selection.EntireRow.Hidden = True
+    Rows("42:55").Select
+    Selection.EntireRow.Hidden = True    
 End Sub
 
 ```
- 
+
 --------
 
