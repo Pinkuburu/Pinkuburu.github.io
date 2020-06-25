@@ -18,7 +18,7 @@ tags:
 
 经过一天的腹稿，一天的实验，一天的开发，终于完成了这项工具，但由于代码水平太烂，我就不拿出来献丑开源了。因为实际上我后面写得烦躁了，于是就很多地方瞎写了，对，没错，就跟下图一样。
 
-![image-20200626042559031](/img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/image-20200626042559031.png)
+![image-20200626042559031](/img/inpost/202006/image-20200626042559031.png)
 
 因为自身代码水平比较菜和垃圾，然后就想借着实际的开发需要，想多尝试一些新的技术和winform控件的特点，给自己列了如下几个技术点应用的要求：
 
@@ -36,7 +36,7 @@ tags:
 
 首先规划功能界面，根据自己脑补的需求设计，设计出了如下的界面
 
-![image-20200626043445355](/img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/image-20200626043445355.png)
+![image-20200626043445355](/img/inpost/202006/image-20200626043445355.png)
 
 输入框（textBox）：用于键入用户需要搜索的角色名称
 
@@ -66,19 +66,19 @@ select * from DATABASE where FIELD=textbox.text
 
 在数据库中，我设计了四张表：battle_skill_config、battleskillconfigtext、gun、gunname。
 
-![image-20200626045356075](/img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/image-20200626045356075.png)
+![image-20200626045356075](/img/inpost/202006/image-20200626045356075.png)
 
 其中battle_skill_config和gun表是我们游戏设计同事在日常工作中开发设计使用的，每次有需要的时候，我只要直接提取他们的数据就完成了最新数据的更新，非常方便。gun表记录了角色的相关的属性信息，例如角色名，职业类型，稀有度，属性信息，和技能ID。battle_skill_config则记录了每一个技能的效果，属性等等，通常是用gun表的技能ID，来battle_skill_config查找对应的技能效果。
 
-![image-20200626045846295](/img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/image-20200626045846295.png)
+![image-20200626045846295](/img/inpost/202006/image-20200626045846295.png)
 
 battleskillconfigtext，gunname则装载了游戏文本海外版的内容，是简单的键值对（Key,Value）,对应的key在各地区中表达的意思相同，Value则根据语言地区，记录了对应国家的文字，数据来源于我们项目的本地化资源。这两份数据表则是用于在gun和battle_skill_config获取到角色信息、技能信息的文本key的时候，来查找对应的外文文本。
 
-![image-20200626045915901](/img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/image-20200626045915901.png)
+![image-20200626045915901](/img/inpost/202006/image-20200626045915901.png)
 
 最后展示一下数据库的包含字段和字段之间的查找关系和查找顺序，简单来说就是从gunname表查找对应的角色名---->得到gunid---->去gun表根据gunid得到name、skill1和skill2---->再用skill1和2对应的id，去battle_skill_config里找到对应的name和description的语言包id---->去battleskillconfigtext里找到真实的文字信息，有一说一，这个流程蛮曲折复杂的，我写的时候也觉得这个数据结构挺弱智的。
 
-![image-20200626051518137](/img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/image-20200626051518137.png)
+![image-20200626051518137](/img/inpost/202006/image-20200626051518137.png)
 
 **gunname表**
 
