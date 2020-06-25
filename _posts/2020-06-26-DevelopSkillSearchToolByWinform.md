@@ -1,0 +1,111 @@
+---
+layout: post
+title: "使用winform开发技能搜索工具"
+subtitle: "第一次尝试在工作中开发的工具结合了数据库查询语句"
+date: 2020-06-26 15:34:53
+author: "邱陈程"
+header-img: "img/post-bg-css.jpg"
+tags:
+- 程序
+- C#
+- winform
+---
+# 前言
+
+因为日本同事经常性需要在自媒体推特上宣发一些新上角色的介绍，其中包含了她们的技能信息，所以会经常需要我们帮忙整理这些内容文本，虽然不是很麻烦啦，但是我这么懒，怎么可以累到自己？所以我就想一劳永逸地解决这个问题，开发一个工具，让日本同事输入角色名字，自动返回他们所需要的角色技能文本。
+
+经过一天的腹稿，一天的实验，一天的开发，终于完成了这项工具，但由于代码水平太烂，我就不拿出来献丑开源了。因为实际上我后面写得烦躁了，于是就很多地方瞎写了，对，没错，就跟下图一样。
+
+![image-20200626042559031](e:\Users\qccwi\Documents\GitHub\Pinkuburu.github.io\img\inpost\2020-06-26-DevelopSkillSearchToolByWinform\image-20200626042559031.png)
+
+因为自身代码水平比较菜和垃圾，然后就想借着实际的开发需要，想多尝试一些新的技术和winform控件的特点，给自己列了如下几个技术点应用的要求：
+
+- 使用SQL语句查询结果
+- 模仿搜索引擎，加入输入框自动补全信息的功能，方便查找
+- 使用DataGridView视图来返回数据信息，加强阅读的体验和使用效果
+- 加入多语言的功能，在日本同事的电脑上显示日语界面
+- 生成只有一个独立的exe文件的应用，不要有一堆琐碎的文件，尽量不要发一个压缩包给同事
+
+设计了五个目标，但因为最后时间关系，我没有完成第四和第五点，争取在后续更新中完成这些目标。
+
+# 开发规划
+
+## 界面
+
+首先规划功能界面，根据自己脑补的需求设计，设计出了如下的界面
+
+![image-20200626043445355](e:\Users\qccwi\Documents\GitHub\Pinkuburu.github.io\img\inpost\2020-06-26-DevelopSkillSearchToolByWinform\image-20200626043445355.png)
+
+输入框（textBox）：用于键入用户需要搜索的角色名称
+
+搜索按钮（button）：用于确认和执行需要搜索的结果
+
+数据表格（dataGridView）：用于展示角色的简单信息和技能文本
+
+## 数据库
+
+根据设想，在用户点击搜索按钮的时候，会将输入框内的文本，和一串SQL语句进行组合，通过如下的语句进行查询得到结果：
+
+```sqlite
+select * from DATABASE where FIELD=textbox.text
+```
+
+### 关于数据源的安置
+
+首先数据查询的数据源要高速高效，最简单直接的想法，就是放在远端的数据库里，然后将数据库的链接信息直接写死在工具代码里面，怎么想都是不安全的，被随随便便逆向一下就能得到源代码，得到服务器信息，这样肯定不行，对服务器有安全隐患，pass。
+
+其次有想过数据库放远程服务器上，然后再写一个web api接口，每次点击按钮，将参数传给api做参数，api再返回数据结果，这个办法比较常规，但问题是我已经完全忘了php怎么写，写不出web api……所以这个方案也pass。
+
+最后决定用SQLite做数据库，内置在程序中，后续只要给同事更新这个数据文件就可以了，而且简单高效，也不需要保证数据的安全。
+
+### 关于数据结构
+
+既然我懒，那么关于数据的更新和使用，肯定不能让我经过很多步骤才能获得一份可用的数据，不然每次更新数据都要折腾半天，就失去了工具开发的意义。
+
+在数据库中，我设计了四张表：battle_skill_config、battleskillconfigtext、gun、gunname。
+
+![image-20200626045356075](e:\Users\qccwi\Documents\GitHub\Pinkuburu.github.io\img\inpost\2020-06-26-DevelopSkillSearchToolByWinform\image-20200626045356075.png)
+
+其中battle_skill_config和gun表是我们游戏设计同事在日常工作中开发设计使用的，每次有需要的时候，我只要直接提取他们的数据就完成了最新数据的更新，非常方便。gun表记录了角色的相关的属性信息，例如角色名，职业类型，稀有度，属性信息，和技能ID。battle_skill_config则记录了每一个技能的效果，属性等等，通常是用gun表的技能ID，来battle_skill_config查找对应的技能效果。
+
+![image-20200626045846295](e:\Users\qccwi\Documents\GitHub\Pinkuburu.github.io\img\inpost\2020-06-26-DevelopSkillSearchToolByWinform\image-20200626045846295.png)
+
+battleskillconfigtext，gunname则装载了游戏文本海外版的内容，是简单的键值对（Key,Value）,对应的key在各地区中表达的意思相同，Value则根据语言地区，记录了对应国家的文字，数据来源于我们项目的本地化资源。这两份数据表则是用于在gun和battle_skill_config获取到角色信息、技能信息的文本key的时候，来查找对应的外文文本。
+
+![image-20200626045915901](e:\Users\qccwi\Documents\GitHub\Pinkuburu.github.io\img\inpost\2020-06-26-DevelopSkillSearchToolByWinform\image-20200626045915901.png)
+
+最后展示一下数据库的包含字段和字段之间的查找关系和查找顺序，简单来说就是从gunname表查找对应的角色名---->得到gunid---->去gun表根据gunid得到name、skill1和skill2---->再用skill1和2对应的id，去battle_skill_config里找到对应的name和description的语言包id---->去battleskillconfigtext里找到真实的文字信息，有一说一，这个流程蛮曲折复杂的，我写的时候也觉得这个数据结构挺弱智的。
+
+![image-20200626051518137](e:\Users\qccwi\Documents\GitHub\Pinkuburu.github.io\img\inpost\2020-06-26-DevelopSkillSearchToolByWinform\image-20200626051518137.png)
+
+**gunname表**
+
+| 字段名  | 数据范例     | 备注说明             |
+| ------- | ------------ | -------------------- |
+| gunid   | gun-10000001 | 游戏中使用的id       |
+| gunname | コルトSAA    | 游戏中真实显示的文字 |
+
+**gun表**
+
+| 字段名 | 数据范例     | 备注说明                                   |
+| ------ | ------------ | ------------------------------------------ |
+| id     | 1            | 游戏中使用的id                             |
+| name   | gun-10000001 | 游戏中用于标识角色信息的语言包id           |
+| skill1 | 100101       | 技能1的id                                  |
+| skill2 | 200101       | 技能2的id，只有当改造完毕后才会有这个技能2 |
+
+**battle_skill_config表**
+
+| 字段名      | 数据范例                      | 备注说明                                                     |
+| ----------- | ----------------------------- | ------------------------------------------------------------ |
+| id          | 10010101                      | 前6位数对应gun表的skill的ID，后面两位用于表示1-10级          |
+| name        | battle_skill_config-110010101 | 游戏中用于标识技能名的语言包id，battle_skill_config-1代表了对应技能的名字，后面延续上面的id的规则 |
+| description | battle_skill_config-210010101 | 游戏中用于标识技能描述的语言包id，battle_skill_config-2代表了对应技能的描述，后面延续了上面id的规则 |
+
+**battleskillconfigtext表**
+
+| 字段名    | 数据范例                      | 备注说明             |
+| --------- | ----------------------------- | -------------------- |
+| skillid   | battle_skill_config-110010101 | 游戏中使用的id       |
+| skilltext | 火力集中                      | 游戏中真实显示的文字 |
+
