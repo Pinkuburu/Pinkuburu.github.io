@@ -111,4 +111,3 @@ battleskillconfigtext，gunname则装载了游戏文本海外版的内容，是�
 | skillid   | battle_skill_config-110010101 | 游戏中使用的id       |
 | skilltext | 火力集中                      | 游戏中真实显示的文字 |
 
-![img](../img/inpost/2020-06-26-DevelopSkillSearchToolByWinform/]F317JYXQWCKWJ02B%U`2T.png)
