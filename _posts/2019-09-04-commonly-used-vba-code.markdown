@@ -45,12 +45,12 @@ Sub 隐藏不需要关注的日服内容()
     Selection.EntireRow.Hidden = True
     Rows("21:21").Select
     Selection.EntireRow.Hidden = True
-    Rows("24:33").Select
+    Rows("26:33").Select
     Selection.EntireRow.Hidden = True
-	Rows("37:46").Select
+    Rows("37:46").Select
     Selection.EntireRow.Hidden = True
     Rows("48:53").Select
-    Selection.EntireRow.Hidden = True    
+    Selection.EntireRow.Hidden = True
 End Sub
 
 ```
