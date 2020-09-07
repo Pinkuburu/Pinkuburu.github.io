@@ -19,18 +19,17 @@ Sub 隐藏美服不需要关注的内容()
 '
 ' 快捷键: Ctrl+s
 '
-    Rows("6:9").Select
+    Rows("6:8").Select
     Selection.EntireRow.Hidden = True
-    Rows("13:30").Select
+    Rows("13:23").Select
     Selection.EntireRow.Hidden = True
-    Rows("32:32").Select
+    Rows("26:30").Select
     Selection.EntireRow.Hidden = True
     Rows("34:34").Select
     Selection.EntireRow.Hidden = True
-    Rows("36:37").Select
+    Rows("36:36").Select
     Selection.EntireRow.Hidden = True
 End Sub
-
 ```
 ```vb
 Sub 隐藏不需要关注的日服内容()
