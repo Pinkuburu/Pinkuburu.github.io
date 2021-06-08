@@ -85,12 +85,17 @@ $ unzip -o test.zip -d tmp/
 
 - 修改Ubuntu的apt源
 ```bash
+#切换到root
 $ sudo -i
+#备份原文件
 $ cp /etc/apt/sources.list /etc/apt/sources.list.backup
-
+#编辑文件
 $ sudo vim /etc/apt/sources.list
+```
+再写入如下的aliyun源
 
-#再写入如下的aliyun源
+```bash
+再写入如下的aliyun源
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
@@ -102,7 +107,6 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 ```
-
 
 - Ubuntu桌面版开启SSH服务
 
