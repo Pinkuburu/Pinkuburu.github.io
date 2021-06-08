@@ -89,7 +89,8 @@ $ sudo -i
 $ cp /etc/apt/sources.list /etc/apt/sources.list.backup
 
 $ sudo vim /etc/apt/sources.list
-- 再写入如下的aliyun源
+
+#再写入如下的aliyun源
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
@@ -104,6 +105,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted univer
 
 
 - Ubuntu桌面版开启SSH服务
+
 ```bash
 #安装服务
 $ sudo apt install openssh-server

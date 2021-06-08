@@ -56,6 +56,7 @@ $ apt-cache madison docker-ce
 ```
 
 - 为了方便使用，还需要安装docker compose
+
 ```bash
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
@@ -66,12 +67,14 @@ $ docker-compose --version
 ```
 
 - 每次修改完docker-compose的配置都需要重启，在放置docker-compose的目录中运行如下命令
+
 ```bash
 #命令代表第一步先停止容器，第二步后台启动容器，如果需要看启动的输出信息，把-d去掉即可
 $ docker-compose down && docker-compose up -d
 ```
 
 - 为了减少使用docker命令时减少打sudo的频率，需要做如下操作
+
 ```bash
 #添加docker用户组
 $ sudo groupadd docker  
@@ -87,6 +90,7 @@ $ newgrp docker
 $ docker ps 
 ```
 -  运行docker镜像引发报错：“ERROR: Couldn't connect to Docker daemon at http docker://localhost ……”
+
 ```bash
 #启动docker服务
 $ service docker start
@@ -123,6 +127,7 @@ $ docker-compose up
 ```
 
 - 在本地Linux登录docker：
+
 ```bash
 $ docker login 
 ```
