@@ -131,16 +131,6 @@ $ docker-compose up
 ```bash
 $ docker login 
 ```
-- 推送镜像的规范是：
-
-```bash
-$ docker push 注册用户名/镜像名:标签名
-```
-- tag命令修改为规范的镜像：
-
-```bash
-$ docker tag boonya/tomcat-allow-remote boonyadocker/tomcat-allow-remote 
-```
 - 通过push命令推送镜像：
 
 ```bash

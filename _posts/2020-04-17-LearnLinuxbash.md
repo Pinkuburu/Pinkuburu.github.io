@@ -17,7 +17,7 @@ tags:
 $ sudo apt install g++
 ```
 
-- git组件
+- 安装git
 ```bash
 $ sudo apt install git
 ```
@@ -48,7 +48,7 @@ $ vi xxxxxxxx.yml
 ```
 - 把文件夹和里面的内容，完整copy到目标地址
 ```bash
-$ cp -r weblate weblate_backup
+$ cp -r testfolder testfolder_backup
 ```
 
 - 删除文件夹，将会删除/var/log/httpd/access目录以及其下所有文件、文件夹
@@ -57,24 +57,26 @@ rm -rf /var/log/httpd/access
 ```
 
 - zip压缩 【参数】 【打包后的文件名】 【打包的目录路径】
-`-a` 将文件转成ASCII模式
-`-F` 尝试修复损坏的压缩文件
-`-h` 显示帮助界面
-`-m` 将文件压缩之后，删除源文件
-`-n` 特定字符串 不压缩具有特定字尾字符串的文件
-`-o` 将压缩文件内的所有文件的最新变动时间设为压缩时候的时间
-`-q` 安静模式，在压缩的时候不显示指令的执行过程
-`-r` 将指定的目录下的所有子目录以及文件一起处理
-`-S` 包含系统文件和隐含文件（S是大写）
+
+  `-a` 将文件转成ASCII模式
+  `-F` 尝试修复损坏的压缩文件
+  `-h` 显示帮助界面
+  `-m` 将文件压缩之后，删除源文件
+  `-n` 特定字符串 不压缩具有特定字尾字符串的文件
+  `-o` 将压缩文件内的所有文件的最新变动时间设为压缩时候的时间
+  `-q` 安静模式，在压缩的时候不显示指令的执行过程
+  `-r` 将指定的目录下的所有子目录以及文件一起处理
+  `-S` 包含系统文件和隐含文件（S是大写）
 ```bash
 $ zip -r test.zip tmb/
 ```
 - unzip
-`-n` 解压缩时不要覆盖原有的文件；
-`-o` 不必先询问用户，unzip执行后覆盖原有的文件；
-`-P [密码]` 使用zip的密码选项；
-`-q` 执行时不显示任何信息；
-`-d [目录]` 指定文件解压缩后所要存储的目录；
+
+  `-n` 解压缩时不要覆盖原有的文件；
+  `-o` 不必先询问用户，unzip执行后覆盖原有的文件；
+  `-P [密码]` 使用zip的密码选项；
+  `-q` 执行时不显示任何信息；
+  `-d [目录]` 指定文件解压缩后所要存储的目录；
 ```bash
 $ unzip test.zip
 ```
@@ -95,7 +97,6 @@ $ sudo vim /etc/apt/sources.list
 再写入如下的aliyun源
 
 ```bash
-再写入如下的aliyun源
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
@@ -116,11 +117,11 @@ $ sudo apt install openssh-server
 #安装完成，服务默认已经开启，可以远程ssh连接了。
 
 #查看ssh服务状态：
-sudo service ssh status
+$ sudo service ssh status
 
 #ssh服务重启命令：
-sudo service ssh restart
+$ sudo service ssh restart
 
 #ssh服务的配置文件，可以修改服务端口，权限控制等
-sudo gedit /etc/ssh/sshd_config
+$ sudo gedit /etc/ssh/sshd_config
 ```
