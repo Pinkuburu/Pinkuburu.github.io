@@ -125,3 +125,11 @@ $ sudo service ssh restart
 #ssh服务的配置文件，可以修改服务端口，权限控制等
 $ sudo gedit /etc/ssh/sshd_config
 ```
+
+- 查看端口占用情况
+
+```bash
+sudo netstat -lnp | grep 80
+```
+
+​    
