@@ -146,6 +146,8 @@ Remove items/tracks/envelope points (depending on focus) - no prompting
 
 随后，配合鼠标右键进行选区的选择即可一键移除配音的空白段落。
 
+![img](../img/inpost/202107/2021-07-25-VoiceManage/v2-ae21b88fa394e7728f5167e1629a8882_b.webp)
+
 
 快速拆分
 最后，执行如下命令即可快速地为选中的剪辑创建 Region，它可以作为导出时每个单个文件的选区识别内容。
@@ -157,11 +159,15 @@ SWS/BR: Create regions from selected items (name by item's notes)
 
 处理配音平衡最大的难点在于如何把很微小的声音抬高而不影响音量大的内容，如果直接使用压缩只会对瞬态产生破坏，因而核心思路是使用扩展器，将人声中音量较低的部分抬高。在这里我使用的是 F.lux Sorela。
 
+![preview](../img/inpost/202107/2021-07-25-VoiceManage/v2-002b4eed7fec0e52ddeeaa0165d38052_r.jpg)
 
 Sorela
 其实任意扩展器配合压缩器就能实现类似的功能。而 Solera 同时具备压缩和扩展（以及反过来的）功能，以及输出时可以启用 Clipper 来防止处理后的音频削波，所以我在这里选用了它来进行一站式处理。
 
 注意看下图 IO 关系的扩展段，它正好跟压缩相反，作用变成了“把输入较低的部分抬高”。
 
+![img](../img/inpost/202107/2021-07-25-VoiceManage/v2-456905e1e5ccbe6cf54d68132a711cac_1440w.jpg)
+
 
 IO 关系图
+
