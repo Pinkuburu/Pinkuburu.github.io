@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "使用C#开发远程执行Linux服务器上的Shell"
 subtitle: "使用C#开发的工具，对远程的Linux服务器执行Shell命令"
 date: 2020-05-09 15:34:53

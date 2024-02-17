@@ -1,7 +1,7 @@
 default:
   text_skin: default
   highlight_theme: default
-  lang: en
+  lang: zh-CN
   paths:
     root: /
     home: /
@@ -22,7 +22,7 @@ default:
       align: left
       theme: light
     articles:
-      show_cover: true
+      show_cover: false
       show_excerpt: false
       show_readmore: false
       show_info: false
@@ -34,7 +34,7 @@ default:
     show_subscribe: false
     full_width: false
     sharing: false
-    comment: true
+    comment: false
     license: false
     pageview: false
     search: default

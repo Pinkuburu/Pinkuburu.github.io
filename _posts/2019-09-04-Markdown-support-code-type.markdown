@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Markdown代码块支持的程序语言"
 subtitle: "No thing to say，就是工作常用罢了"
 date: 2019-09-04 15:04:53

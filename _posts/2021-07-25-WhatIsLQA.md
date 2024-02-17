@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "LQA是什么？"
 subtitle: "LQA简单的从字面理解为对项目中翻译内容的质量保证"
 date: 2021-07-25 09:31:30

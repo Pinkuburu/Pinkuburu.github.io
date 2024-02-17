@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "什么是本地化？"
 subtitle: ""
 date: 2021-07-25 10:34:30

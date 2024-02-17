@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Adobe CC 2018 全产品离线安装包"
 subtitle: "日常在所难免会遇到需要处理多媒体素材的需求"
 date: 2021-07-25 03:55:53

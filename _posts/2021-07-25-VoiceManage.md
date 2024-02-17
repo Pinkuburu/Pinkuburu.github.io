@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "【转载】一种适用于 GAL-Game 配音录制、整理的项目管理方案总结"
 subtitle: ""
 date: 2021-07-25 11:00:30

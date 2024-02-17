@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Linux操作命令学习和备忘"
 subtitle: "工作中常用的Linux维护命令"
 date: 2020-06-08 19:19:53

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "在Ubuntu上安装和使用Docker"
 subtitle: "适合新手一站式入门并了解docker的安装使用，基于工作经验和需求整理归纳的命令"
 date: 2021-06-08 16:22:30

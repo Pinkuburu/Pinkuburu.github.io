@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "常用的VBA代码随笔记录"
-subtitle: "No thing to say，就是工作常用罢了"
 date: 2019-09-04 14:35:53
 author: "邱陈程"
-header-img: "img/title/2019/1556251157266.jpg"
 tags:
 - Excel
 - VBA

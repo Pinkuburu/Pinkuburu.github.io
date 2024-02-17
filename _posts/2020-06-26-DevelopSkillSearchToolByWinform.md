@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "使用winform开发技能搜索工具"
 subtitle: "第一次尝试在工作中开发的工具结合了数据库查询语句"
 date: 2020-06-26 15:34:53

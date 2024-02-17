@@ -56,7 +56,7 @@
         {%- endif -%}
         <div class="item__content">
           <header><a href="{{ _article_url }}"><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></a></header>
-          <div class="item__description">
+          <!-- <div class="item__description">
             {%- if _article.excerpt and include.show_excerpt -%}
               <div class="article__content" itemprop="description articleBody">
                 {%- if _excerpt_type == 'html' -%}
@@ -69,7 +69,7 @@
             {%- if include.show_readmore -%}
               <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
             {%- endif -%}
-          </div>
+          </div> -->
           {%- if include.show_info -%}
             {%- include snippets/assign.html target=site.data.variables.default.page.pageview
               source0=_article.pageview -%}

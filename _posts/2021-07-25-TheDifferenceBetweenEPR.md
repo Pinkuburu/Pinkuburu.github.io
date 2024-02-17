@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Editing/Proofreading/Review之间的区别是什么？"
 subtitle: "用大白话解释这几个工作步骤的区别和职责。"
 date: 2021-07-25 10:00:30
