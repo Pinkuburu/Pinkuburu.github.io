@@ -15,7 +15,7 @@ tags:
 
 本地化的工作中，翻译不是一步到位的，TEP是指翻译（Translation）、编辑（Editing）和校对（Proofreading），这三个步骤是整个翻译过程中最重要的部分。
 
-![TEP: 翻译、 编辑和校对](../img/inpost/202107/2021-07-25-WhyTEPIsImportant/tep_translation-editing-and-proofreading.png)
+![TEP: 翻译、 编辑和校对](img/inpost/2021-07-25-WhyTEPIsImportant/tep_translation-editing-and-proofreading.png)
 
 ## 为什么要TEP？
 
