@@ -1,0 +1,106 @@
+	﻿
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>停不下的剑三</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <meta property="og:title" content="2048 game"/>
+  <meta property="og:site_name" content="2048 game"/>		
+</head>
+<body>
+
+  <div class="container">
+      <p>现已登陆Apple Store商店，iPhone用户可以点击按钮下载。由于苹果开发工具不支持iOS6以下的开发，所以游戏也不支持iOS6以下设备。求五星好评。<br>
+          <a href="https://itunes.apple.com/cn/app/ting-bu-xia-de-jian-san/id850241966?mt=8"><img src="appstore.png" width="500" height="142" alt=""/></a><br>
+          <strong class="important2">特特特大喜讯！:</strong>有不少小伙伴玩了这个游戏，剑三里真出了玄晶，<a href="http://qq1012803704.github.io/jx2048/xuanjing.html" target="_blank">出玄晶的小伙伴的还愿名单点击进入</a><br>
+          <strong class="important2">关于安卓手机说明:</strong>打开网页后，就不再消耗流量了，游戏和服务器没有任何数据交互，所有的东西都换存在手机了，推荐火狐浏览器。
+    <br>
+    
+    <strong class="important2">Windows用户:</strong>打开游戏看不见游戏文字，请更换火狐/谷歌浏览器尝试下，或者升级到更高版本的IE以及其他支持HTML5的浏览器。
+    <br>
+    <a href="http://weibo.com/acghongniu" target="_blank">点击进入我的新浪微博（我骗个粉丝我容易吗我？）</a><br>
+    剑三交流QQ群：238178260<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=e4625a8c0e0e5609ff17f86358fafa834cfde978ead0a9abef43c39252825ef1"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="剑三2048根本停不下来" title="剑三2048根本停不下来"></a></p>
+      <hr>
+    <div class="heading">
+      <h1 class="title">停不下的剑三</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <p class="game-intro">通过操作<strong>↑，↓，←，→（手机浏览器直接触摸屏滑动）</strong>按键，合并相同的套装，努力开出 <strong>沉沙玄晶</strong> 吧！当你合出玄晶，离你在游戏里摸到玄晶也不远了，到时候别忘了来我这还愿啊~</p>
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="retry-button">再来一次</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5855113'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5855113%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+  </div>
+
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_score_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  
+</body>
+</html>
