@@ -342,7 +342,7 @@ public class UnitInfo : MonoBehaviour
 
 创建脚本**UnitInfo_Editor.cs**。代码如下：
 
-```C#
+```c#
 using UnityEngine;
 using UnityEditor;
  
@@ -396,7 +396,7 @@ public class UnitXls_Editor : Editor
 
 **（1）UnitInfo_Editor.cs（优化版）**
 
-```C#
+```c#
 using UnityEngine;
 using UnityEditor;
 using System;
@@ -446,7 +446,7 @@ public class UnitInfo_Editor : Editor
 
 **（2）UnitInfo.cs只需要退回最初的版本即可。**
 
-```C#
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
