@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "糖果摇滚巨星-大鸟琥珀音乐会项目"
+title: "[转载]糖果摇滚巨星-大鸟琥珀音乐会项目"
 subtitle: "Candy Rock Star：Unity-Chan Concert Project"
 date: 2017-01-20 12:00:00
 author: "邱陈程"

@@ -39,7 +39,7 @@ tags:
 
 > **假设游戏中需要定义若干个人物(Unit)的属性。每个人物具有以下属性：ID、名称、生命上限、攻击力和移动速度。现在我们打开Excel或WPS软件，新建一个.xlsx文件，来定义两个游戏人物：汤姆和杰瑞。**
 
-![image-20240217160819870](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/image-20240217160819870.png)
+![image-20240217160819870](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/image-20240217160819870.png)
 
 习惯上，我们使用的配置表，在格式和内容含义上满足以下性质：
 
@@ -63,7 +63,7 @@ Unity可以非常好地支持第三方dll文件。将文件**EPPlus.dll**直接�
 
 设置完成后的**EPPlus.dll**在Unity中显示如下图。
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/d72496847cac04793171f53e319a0ddc.png)
+![img](/img/inpost/未命名/d72496847cac04793171f53e319a0ddc.png)
 
 **在Unity项目的Assets目录下建立名为Excel的文件夹，将前面创建的*Unit.xlsx*文件放入其中。创建游戏脚本*ReadUnits.cs*，代码内容如下。**
 
@@ -110,14 +110,14 @@ public class ReadUnits : MonoBehaviour
 
 编译完成后，可以看到Unity编辑器的顶部出现了新的选项卡”Excel”。
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/57540f01026c5a94fa10a73810c354e2.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/57540f01026c5a94fa10a73810c354e2.png)
 
 现在，选中该选项卡内的Read Excel选项，执行代码内的LoadExcel()静态方法，进行读表。
 
 查看Console页面，我们看到，**Unit.xlsx**文件已经被成功解读，Console页面中显示出了表格中每一格的坐标和文字内容。
 
-![img](img/inpost/aeff37304722a4057842ee2daf85b2de.png)
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/d6bff95631a97b2eb3430bdf88a4e89e.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/aeff37304722a4057842ee2daf85b2de.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/d6bff95631a97b2eb3430bdf88a4e89e.png)
 
 到这里，我们就在Unity中首次完成了对Excel表格的读取，是不是很开心？
 
@@ -165,7 +165,7 @@ public class UnitInfo : MonoBehaviour
 
 **这些空物体用来代表游戏中的各个游戏角色。由于本篇目讲解的是Excel读表，所以我们不需要让游戏角色具有模型、动画等游戏性元素，只要能挂上组件就可以了。*
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/666708dcdbf5c2e0971ce62d210b3923.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/666708dcdbf5c2e0971ce62d210b3923.png)
 
 我们应该怎样做，才能从Excel表格中读出数据，然后应用到UnitInfo组件上呢？
 
@@ -173,7 +173,7 @@ public class UnitInfo : MonoBehaviour
 
 > **容易想到，如果Unit表变得很长，例如有200行；每一行代表一份角色数据，那么此时这个表记载了199份不同的游戏角色数据。将每一份数据想象成一个球，那么199份数据放在一起就好像一个海洋球泳池——需要取出一份数据应用到特定游戏角色时，只要捞出一个特定ID的球即可。**
 
-![image-20240217161758468](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/image-20240217161758468.png)
+![image-20240217161758468](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/image-20240217161758468.png)
 
 **于是我们知道，读取配表的过程最好以“小球”为操作对象，也就是说，应当以Excel表的“行”为操作单元。每一行代表一组数据，这组数据可以定义一个游戏角色的属性。**
 
@@ -334,7 +334,7 @@ public class UnitInfo : MonoBehaviour
 
 修改之后的UnitInfo组件在Inspector中的外观如图。InitFromID属性要求你填入一个ID——依据这个ID，UnitInfo中新加入的InitSelf方法就可以呼叫**UnitXls.**LoadExcelAsDictionary()方法来读表，然后获取返回的字典，并将指定ID的行数据应用到自身。
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/5674d96d22ee86c7068bd7969ab79226.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/5674d96d22ee86c7068bd7969ab79226.png)
 
 #### 1.7  Inspector自定义按钮
 
@@ -366,21 +366,21 @@ public class UnitXls_Editor : Editor
 
 编译代码，返回Unity编辑器，可以看到UnitInfo组件的外观发生了变化：
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/b9eb63ef695c3c75bfae514aa360ecf2.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/b9eb63ef695c3c75bfae514aa360ecf2.png)
 
 组件上多出了一个自定义按钮！
 
 现在，我们只要在InitFromID中填写为表格内已有的ID，按下按钮，就可以对UnitInfo的属性进行设置。
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/3c245777c8674fd4df14fae8fda03eb1.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/3c245777c8674fd4df14fae8fda03eb1.png)
 
 根据表格的内容，我们填入**1**试一下。按下按钮，UnitInfo组件的属性数值，立即变成了表格内记载的角色“汤姆”的数值：
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/cabee567816b3217c7fc78882de5b7e2.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/cabee567816b3217c7fc78882de5b7e2.png)
 
 将Init From ID从**1**改为**0**，以获取“杰瑞”的数据。再点击按钮刷新一次，结果如下：
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/e6449285c28f3c46d18db131a641f095.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/e6449285c28f3c46d18db131a641f095.png)
 
 至此，我们的任务终于大功告成！在艰苦的努力下，Excel文件终于在Unity中摘下了高冷难及的面纱；现在，我们可以使用配置表来管理游戏中的批量数据，为开发中的重复性工作和团队协作提供一种强力的保障。
 
@@ -474,7 +474,7 @@ public class UnitInfo : MonoBehaviour
 
 优化之后，我们已经将与Excel有关的配置表相关代码与游戏的主逻辑部分完全剥离开。此时，不妨将读表相关模块在项目中统一放到单独的文件夹内，作为一个“大插件”进行管理。
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/7f97a2d00e0fbe284c28f88ebc943a30.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/7f97a2d00e0fbe284c28f88ebc943a30.png)
 
 不需要读配表时，将黄色框内的内容整体删除，不会引发任何故障。
 
@@ -486,6 +486,6 @@ public class UnitInfo : MonoBehaviour
 
 例如，如果你想要加入一个道具表（Item）系统，那么你的架构应该是这样：
 
-![img](img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/7cbf2bc47e51927dca6ae6338eb2b490.png)
+![img](/img/inpost/%E6%9C%AA%E5%91%BD%E5%90%8D/7cbf2bc47e51927dca6ae6338eb2b490.png)
 
 黄色框内是配置表系统，蓝色框内是游戏的主逻辑。在此架构下，你可以扩展出任意多个配置表分支，且配置表系统始终不会与游戏主干代码产生相互依赖。
