@@ -1,11 +1,11 @@
 # Site settings
-title: Pinkuburu's Blog
+title: 啊？还要给博客想个名字？
 SEOTitle: 邱陈程的博客 | Pinkuburu's Blog
 header-img: img/home-bg.jpg
 email: 1012803704@qq.com
 description: "关于Unity开发，游戏开发，Unreal，虚幻4，美术，手绘，3D美术，渲染技术"
 keyword: "邱陈程, pinkuburu, Unity, C#"
-url: "https://omgnn.com/"              # your host, for absolute URL 
+url: "https://omgnn.com"              # your host, for absolute URL 
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -16,8 +16,8 @@ RSS: false
 #weibo_username:     acghongniu
 #zhihu_username:     he-hong-niu-you-li-liang
 github_username:    Pinkuburu
-twitter_username:  PinkuburuCC
-facebook_username:  profile.php?id=100003134645551
+#twitter_username:  PinkuburuCC
+#facebook_username:  profile.php?id=100003134645551
 linkedin_username:  陈程-邱-9ab8a4a3
 
 
@@ -78,7 +78,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写文档，敲敲代码，学学画画<br>世界那么大，钱包那么小"
+sidebar-about-description: "东一榔头西一棒槌，三分钟热度学东西<br>喜欢整些有的没的"
 sidebar-avatar: /img/avatar-qcc.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
