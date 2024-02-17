@@ -1,3 +1,13 @@
+---
+layout: post
+title: "NPOI操作excel的一些方法代码示例"
+date: 2022/8/11 18:49:21
+author: "邱陈程"
+tags:
+- C#
+- 程序
+---
+
 ```c#
 //创建工作簿
 IWorkbook workbook = new XSSFWorkbook();
