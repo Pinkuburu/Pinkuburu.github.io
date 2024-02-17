@@ -1,10 +1,7 @@
 ---
-layout:     post
 title:      "我的独立博客"
-subtitle:   " \"Hello World\""
 date:       2017-01-20 10:00:00
 author:     "邱陈程"
-header-img: "img/post-bg-2015.jpg"
 tags:
     - 生活
 ---

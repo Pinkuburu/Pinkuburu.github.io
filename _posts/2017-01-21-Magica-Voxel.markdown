@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "MagicaVoxel 体素建模软件"
 subtitle: "MagicaVoxel：A free lightweight 8-bit voxel editor and interactive path tracing renderer, enjoy :) "
 date: 2017-01-21 09:30:00
 author: "邱陈程"
-header-img: "img/title/2017/title2017-01-21.png"
 tags:
 - 美术
 - 建模

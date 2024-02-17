@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "本地化流程中所谓的TEP为什么很重要"
-subtitle: "TEP的循环从根本上影响着本地化的质量，在整个本地化项目中占比也是最大的。"
 date: 2021-07-25 09:12:30
 author: "邱陈程"
-header-img: "img/post-bg-css.jpg"
 tags:
 - 本地化
 ---

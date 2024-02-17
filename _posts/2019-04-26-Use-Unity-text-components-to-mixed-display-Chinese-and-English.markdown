@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "中英文混排在Unity中偶尔会出现错误换行的原因"
 subtitle: "Why use the Unity text component to mix and display Chinese and English may be wrong"
 date: 2019-04-26 12:35:53
 author: "邱陈程"
-header-img: "img/title/2019/1556251157266.jpg"
 tags:
 - Unity
 ---
