@@ -19,7 +19,7 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://omgnn.com
-baseurl : / # does not include hostname
+baseurl : https://omgnn.com # does not include hostname
 title   : 啊？还要给博客想个名字？
 description: 只是想借着Github免费的服务器来记录一些低质量垃圾罢了
   
