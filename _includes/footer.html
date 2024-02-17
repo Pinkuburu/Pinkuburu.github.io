@@ -1,37 +1,42 @@
+<!-- The Footer -->
 
-<footer class="footer py-4 js-page-footer">
-  <div class="main">
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p>
+    {{- '©' }}
+    <time>{{ 'now' | date: '%Y' }}</time>
 
-    {%- assign _site_author = site.author -%}
-    {%- if _site_author.type == 'organization' -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
-    {%- else -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
-    {%- endif -%}
+    {% if site.social.links %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% else %}
+      <em class="fst-normal">{{ site.social.name }}</em>.
+    {% endif %}
 
-    <div itemscope itemtype="{{ _site_author_itemtype }}">
-      <meta itemprop="name" content="{{ _site_author.name }}">
-      {%- assign _site_author_url = _site_author.url | default: '/'-%}
-      {%- include snippets/get-nav-url.html path=_site_author_url -%}
-      {%- assign _site_author_url = __return -%}
-      <meta itemprop="url" content="{{ _site_author_url }}">
-      {%- if _site_author.bio -%}
-        <meta itemprop="description" content="{{ _site_author.bio }}">
-      {%- endif -%}
-      <div class="footer__author-links">
-        {%- include author-links.html author=_site_author -%}
-      </div>
-    </div>
-    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-    {%- assign _locale_copyright_dates = __return -%}
-    <div class="site-info mt-2">
-      <div>
-        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-        {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }},
-        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </div>
-    </div>
-  </div>
+    {% if site.data.locales[include.lang].copyright.brief %}
+      <span
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="{{ site.data.locales[include.lang].copyright.verbose }}"
+      >
+        {{- site.data.locales[include.lang].copyright.brief -}}
+      </span>
+    {% endif %}
+  </p>
+
+  <p>
+    {%- capture _platform -%}
+      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+    {%- endcapture -%}
+
+    {%- capture _theme -%}
+      <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
+    {%- endcapture -%}
+
+    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
+  </p>
 </footer>

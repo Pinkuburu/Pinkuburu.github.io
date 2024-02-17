@@ -1,61 +1,112 @@
 {
-  "name": "jekyll-text-theme",
-  "version": "2.2.6",
-  "author": "Tian Qi",
-  "license": "MIT",
-  "keywords": [
-    "jekyll",
-    "jekyll-theme",
-    "jekyll-template"
-  ],
-  "homepage": "https://github.com/kitian616/jekyll-TeXt-theme",
-  "description": "A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.",
+  "name": "jekyll-theme-chirpy",
+  "version": "6.5.0",
+  "description": "A minimal, responsive, and feature-rich Jekyll theme for technical writing.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kitian616/jekyll-TeXt-theme.git"
+    "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
   },
+  "author": "Cotes Chung",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kitian616/jekyll-TeXt-theme/issues"
+    "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
   },
+  "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy/",
   "scripts": {
-    "build": "cross-env JEKYLL_ENV=production bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve -H 0.0.0.0",
-    "Gemfile.lock": "docker run --rm -v \"$PWD\":/usr/src/app -w /usr/src/app ruby:2.6 bundle install",
-    "docker-dev:build-image": "docker-compose -f ./docker/docker-compose.build-image.yml build",
-    "docker-dev:default": "docker-compose -f ./docker/docker-compose.default.yml up",
-    "docker-dev:dev": "docker-compose -f ./docker/docker-compose.dev.yml up",
-    "docker-dev:demo-dev": "docker-compose -f ./docker/docker-compose.demo.yml up",
-    "docker-dev:demo-beta": "cross-env JEKYLL_ENV=beta docker-compose -f ./docker/docker-compose.demo.yml up",
-    "docker-dev:demo-prod": "cross-env JEKYLL_ENV=production docker-compose -f ./docker/docker-compose.demo.yml up",
-    "docker-prod:build": "cross-env JEKYLL_ENV=production docker-compose -f ./docker/docker-compose.prod.yml build",
-    "docker-prod:serve": "cross-env JEKYLL_ENV=production docker-compose -f ./docker/docker-compose.prod.yml up",
-    "default": "bundle exec jekyll serve -H 0.0.0.0 -t",
-    "dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.dev.yml",
-    "demo-dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
-    "demo-beta": "cross-env JEKYLL_ENV=beta bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
-    "demo-prod": "cross-env JEKYLL_ENV=production bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
-    "eslint": "eslint \"_includes/**/*.js\"",
-    "eslint-fix": "eslint \"_includes/**/*.js\" --fix",
-    "stylelint": "stylelint --syntax scss \"_sass/**/*.scss\"",
-    "stylelint-fix": "stylelint --syntax scss \"_sass/**/*.scss\" --fix",
-    "gem-build": "rm -fv jekyll-text-theme-*.gem && gem build jekyll-text-theme.gemspec",
-    "gem-push": "gem push jekyll-text-theme-*.gem"
+    "prebuild": "npx rimraf assets/js/dist",
+    "build": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs",
+    "prewatch": "npx rimraf assets/js/dist",
+    "watch": "npx rollup -c --bundleConfigAsCjs -w",
+    "test": "npx stylelint _sass/**/*.scss",
+    "fixlint": "npm run test -- --fix"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "cross-env": "^7.0.0",
-    "eslint": "^6.8.0",
-    "husky": "^4.2.1",
-    "stylelint": "^13.0.0",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.14.2"
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.23.9",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "husky": "^9.0.11",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.10.0",
+    "rollup-plugin-license": "^3.2.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard-scss": "^13.0.0"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  "prettier": {
+    "trailingComma": "none"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.2%",
+    "not dead"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [
+        0,
+        "always"
+      ]
     }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+      "no-descending-specificity": null,
+      "shorthand-property-no-redundant-values": null,
+      "at-rule-no-vendor-prefix": null,
+      "property-no-vendor-prefix": null,
+      "selector-no-vendor-prefix": null,
+      "value-no-vendor-prefix": null,
+      "color-function-notation": "legacy",
+      "alpha-value-notation": "number",
+      "selector-not-notation": "simple",
+      "color-hex-length": "long",
+      "declaration-block-single-line-max-declarations": 3,
+      "scss/operator-no-newline-after": null,
+      "rule-empty-line-before": [
+        "always",
+        {
+          "ignore": [
+            "after-comment",
+            "first-nested"
+          ]
+        }
+      ],
+      "value-keyword-case": [
+        "lower",
+        {
+          "ignoreProperties": [
+            "/^\\$/"
+          ]
+        }
+      ],
+      "media-feature-range-notation": "prefix"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    },
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "perf",
+        "section": "Improvements"
+      }
+    ]
   }
 }
