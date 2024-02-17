@@ -18,17 +18,16 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://omgnn.com # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : 啊？还要给博客想个名字？
-description: 只是想借着Github免费的服务器来记录一些低质量垃圾罢了
-> # this means to ignore newlines until "Language & timezone"
-  
+description: > # this means to ignore newlines until "Language & timezone"
+  只是想借着Github免费的服务器来记录一些低质量垃圾罢了
 
 
 ## => Language and Timezone
 ##############################
-lang: zh-cn # the language of your site, default as "en"
+lang: zh-cn# the language of your site, default as "en"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
