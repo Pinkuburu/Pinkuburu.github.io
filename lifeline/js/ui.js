@@ -78,6 +78,17 @@ class UIManager {
     return tag;
   }
 
+  /** 获取玩家操作标签（"回复……" / "Reply…"等） */
+  _playerLabel() {
+    try {
+      const strings = window["__STRINGS_" + (window.__currentLang || "CN")];
+      if (strings && strings.story_respond) {
+        return strings.story_respond.replace(/^\[|\]$/g, "");
+      }
+    } catch (e) { /* fallthrough */ }
+    return "You";
+  }
+
   /* ---------- 延时提示 ---------- */
 
   /** 显示带消息的延时（如 "Taylor is sleeping..."） */
@@ -168,7 +179,7 @@ class UIManager {
     div.className = "message taylor";
     const sp = document.createElement("span");
     sp.className = "speaker taylor";
-    sp.textContent = "You";
+    sp.textContent = this._playerLabel();
     div.appendChild(sp);
     const content = document.createElement("span");
     content.className = "content";
@@ -210,23 +221,25 @@ class UIManager {
 
   showGameOver() {
     this.choiceArea.innerHTML = "";
+    const strings = window["__STRINGS_" + (window.__currentLang || "CN")] || {};
+
+    // 从 strings 取游戏结束文本，取第一句作标题
+    const overText = strings.dialog_game_over_watch || strings.dialog_game_over || "";
+    const firstLine = overText.split(/\n|。/)[0].replace(/。/g, "");
+
+    // 重新开始按钮文本
+    const restartText = (strings.story_restart_the_story || "[重新开始]").replace(/^\[|\]$/g, "");
 
     const div = document.createElement("div");
     div.className = "message system game-over-message";
 
     const title = document.createElement("div");
     title.className = "end-title";
-    title.textContent = "— 此路已尽 —";
-
-    const hint = document.createElement("div");
-    hint.style.fontSize = "0.8rem";
-    hint.style.color = "var(--text-dim)";
-    hint.style.marginBottom = "16px";
-    hint.textContent = "泰勒在这条时间线上走到了尽头。\n你可以重新开始，探索不同的选择。";
+    title.textContent = "— " + firstLine + " —";
 
     const restartBtn = document.createElement("button");
     restartBtn.className = "choice-btn";
-    restartBtn.textContent = "重新开始";
+    restartBtn.textContent = restartText;
     restartBtn.style.display = "inline-block";
     restartBtn.style.width = "auto";
     restartBtn.addEventListener("click", () => {
@@ -235,7 +248,6 @@ class UIManager {
     });
 
     div.appendChild(title);
-    div.appendChild(hint);
     div.appendChild(restartBtn);
     this.msgList.appendChild(div);
     this.scrollBottom();
@@ -259,6 +271,7 @@ class UIManager {
             { text: "Русский", value: "ru" },
             { text: "日本語", value: "jp" },
           ], resolve, 3);
+          html += `<div class="setup-disclaimer">${DISCLAIMER.cn.replace(/<br>/g, "<br>")}</div>`;
           break;
 
         case "name":
@@ -527,6 +540,20 @@ class UIManager {
 
   /** 初始化设置面板 */
   _setupSettingsPanel(onRestart) {
+    // Tab 切换
+    const tabBtns = this.settingsOverlay.querySelectorAll(".settings-tab");
+    const tabContents = this.settingsOverlay.querySelectorAll(".settings-tab-content");
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab;
+        tabBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        tabContents.forEach((c) => c.classList.remove("active"));
+        const target = document.getElementById("tab-" + tab);
+        if (target) target.classList.add("active");
+      });
+    });
+
     const ds = Storage.getDisplay();
 
     // 字体大小按钮
@@ -603,6 +630,11 @@ class UIManager {
 
   showSettings() {
     this.settingsOverlay.classList.remove("hidden");
+    // 重置到"设置" Tab
+    const tabs = this.settingsOverlay.querySelectorAll(".settings-tab");
+    const contents = this.settingsOverlay.querySelectorAll(".settings-tab-content");
+    tabs.forEach((t) => t.classList.toggle("active", t.dataset.tab === "settings"));
+    contents.forEach((c) => c.classList.toggle("active", c.id === "tab-settings"));
   }
 
   hideSettings() {

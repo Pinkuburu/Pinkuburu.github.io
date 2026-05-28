@@ -3,6 +3,26 @@
    对应 Python 版的 Lifeline.start() + 主流程
    ============================ */
 
+/** 多语言免责声明 */
+const DISCLAIMER = {
+  cn: "本网页版仅供学习交流<br>请至应用商店支持 Lifeline 系列正版游戏",
+  en: "This web version is for educational purposes only<br>Please support the Lifeline series on the official app store",
+  de: "Diese Web-Version dient nur zu Lernzwecken<br>Bitte unterstütze die Lifeline-Reihe im offiziellen App Store",
+  fr: "Cette version web est à but éducatif uniquement<br>Merci de soutenir la série Lifeline sur l'App Store officiel",
+  ru: "Эта веб-версия только для ознакомления<br>Поддержите серию Lifeline в официальном магазине приложений",
+  jp: "このWeb版は学習目的のみです<br>公式アプリストアでLifelineシリーズをサポートしてください",
+};
+
+/** 多语言继续提示 */
+const RESUME_MSG = {
+  cn: "— 继续上次的冒险 —",
+  en: "— Continuing your adventure —",
+  de: "— Dein Abenteuer geht weiter —",
+  fr: "— L'aventure continue —",
+  ru: "— Приключение продолжается —",
+  jp: "— 冒険の続き —",
+};
+
 class App {
   constructor() {
     this.ui = new UIManager();
@@ -65,6 +85,9 @@ class App {
     this._setupLangSwitcher();
     this._setupSettingsPanel();
 
+    // 更新界面语言
+    this._updateDisclaimers(lang);
+
     // 请求浏览器通知权限
     this._requestNotification();
 
@@ -90,9 +113,12 @@ class App {
     // 请求浏览器通知权限
     this._requestNotification();
 
+    // 更新界面语言
+    this._updateDisclaimers(settings.lang);
+
     const scene = settings.atScene || "Start";
     if (scene !== "Start") {
-      await this.ui.showSystem("— 继续上次的冒险 —");
+      await this.ui.showSystem(RESUME_MSG[settings.lang] || RESUME_MSG.cn);
     }
 
     await this.engine.playScene(scene);
@@ -120,6 +146,16 @@ class App {
   _handleRestart() {
     Storage.reset();
     location.reload();
+  }
+
+  _updateDisclaimers(lang) {
+    const text = DISCLAIMER[lang] || DISCLAIMER.cn;
+    // 游戏内免责
+    const el = document.getElementById("disclaimer-inline");
+    if (el) el.innerHTML = text;
+    // 设置面板免责
+    const el2 = document.getElementById("disclaimer-settings");
+    if (el2) el2.innerHTML = text;
   }
 
   /* ---------- 浏览器通知 ---------- */

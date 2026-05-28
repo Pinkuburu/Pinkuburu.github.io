@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
   <title>生命线：静夜 — Lifeline: Silent Night</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,6 +30,9 @@
     <div id="scroll-anchor"></div>
   </div>
 
+  <!-- 免责声明 -->
+  <div id="disclaimer-inline" class="disclaimer"></div>
+
   <!-- 选项按钮区域 -->
   <div id="choice-area"></div>
 
@@ -48,46 +52,60 @@
   <!-- 设置面板 -->
   <div id="settings-overlay" class="hidden">
     <div class="settings-panel">
-      <div class="settings-title">设 置</div>
-
-      <div class="settings-group">
-        <label class="settings-label">字体大小</label>
-        <div class="settings-row" id="setting-fontsize">
-          <button data-value="small">小</button>
-          <button data-value="medium" class="active">中</button>
-          <button data-value="large">大</button>
-        </div>
+      <div class="settings-tabs">
+        <button class="settings-tab active" data-tab="settings">设置</button>
+        <button class="settings-tab" data-tab="contact">联系我</button>
       </div>
 
-      <div class="settings-group">
-        <label class="settings-label">消息速度</label>
-        <div class="settings-row" id="setting-speed">
-          <button data-value="800">快</button>
-          <button data-value="1500" class="active">正常</button>
-          <button data-value="3500">慢</button>
+      <!-- Tab: 设置 -->
+      <div class="settings-tab-content active" id="tab-settings">
+        <div class="settings-group">
+          <label class="settings-label">字体大小</label>
+          <div class="settings-row" id="setting-fontsize">
+            <button data-value="small">小</button>
+            <button data-value="medium" class="active">中</button>
+            <button data-value="large">大</button>
+          </div>
         </div>
+
+        <div class="settings-group">
+          <label class="settings-label">消息速度</label>
+          <div class="settings-row" id="setting-speed">
+            <button data-value="800">快</button>
+            <button data-value="1500" class="active">正常</button>
+            <button data-value="3500">慢</button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <label class="settings-label">快速模式（跳过所有等待）</label>
+          <div class="settings-row" id="setting-fastmode">
+            <button data-value="false" class="active">关闭</button>
+            <button data-value="true">开启</button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <label class="settings-label">消息淡入动画</label>
+          <div class="settings-row" id="setting-animation">
+            <button data-value="true" class="active">开启</button>
+            <button data-value="false">关闭</button>
+          </div>
+        </div>
+
+        <div class="settings-divider"></div>
+
+        <button id="settings-restart" class="settings-restart-btn">重新开始游戏</button>
+        <button id="settings-close" class="settings-close-btn">关闭</button>
+        <div id="disclaimer-settings" class="settings-disclaimer"></div>
       </div>
 
-      <div class="settings-group">
-        <label class="settings-label">快速模式（跳过所有等待）</label>
-        <div class="settings-row" id="setting-fastmode">
-          <button data-value="false" class="active">关闭</button>
-          <button data-value="true">开启</button>
+      <!-- Tab: 联系我 -->
+      <div class="settings-tab-content" id="tab-contact">
+        <div class="contact-image-wrap">
+          <img src="img/C9EA9497AC6632EE1764593E4242EE06.jpg" alt="联系我">
         </div>
       </div>
-
-      <div class="settings-group">
-        <label class="settings-label">消息淡入动画</label>
-        <div class="settings-row" id="setting-animation">
-          <button data-value="true" class="active">开启</button>
-          <button data-value="false">关闭</button>
-        </div>
-      </div>
-
-      <div class="settings-divider"></div>
-
-      <button id="settings-restart" class="settings-restart-btn">重新开始游戏</button>
-      <button id="settings-close" class="settings-close-btn">关闭</button>
     </div>
   </div>
 </div>

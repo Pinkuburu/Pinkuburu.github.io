@@ -218,13 +218,52 @@ body {
   animation: fade-in 0.2s ease-out;
 }
 
-.settings-title {
-  font-family: var(--font-mono);
-  font-size: 1rem;
+/* --- 设置面板 Tab 切换 --- */
+.settings-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.settings-tab {
+  flex: 1;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.settings-tab:hover {
+  color: var(--text);
+}
+
+.settings-tab.active {
   color: var(--text-bright);
+  border-bottom-color: var(--accent);
+}
+
+.settings-tab-content {
+  display: none;
+}
+
+.settings-tab-content.active {
+  display: block;
+}
+
+/* 联系我 Tab */
+.contact-image-wrap {
   text-align: center;
-  letter-spacing: 0.15em;
-  margin-bottom: 20px;
+}
+
+.contact-image-wrap img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .settings-group {
@@ -286,6 +325,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* --- 重新开始按钮 --- */
 .settings-restart-btn:hover {
   background: rgba(230, 57, 70, 0.1);
 }
@@ -310,6 +350,34 @@ body {
 
 .settings-close-btn:hover {
   color: var(--text);
+}
+
+/* --- 字体大小预设（rem 相对单位，兼容响应式） --- */
+/* --- 免责声明 --- */
+.disclaimer {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.settings-disclaimer {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+.setup-disclaimer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 32px;
+  line-height: 1.6;
 }
 
 /* --- 字体大小预设（rem 相对单位，兼容响应式） --- */
