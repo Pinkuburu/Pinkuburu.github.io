@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>生命线：静夜 — Lifeline: Silent Night</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- 顶部状态栏 -->
+  <div id="top-bar">
+    <span id="status-indicator"></span>
+    <div id="top-actions">
+      <button id="settings-btn" title="设置">⚙</button>
+      <div id="lang-switcher">
+        <button id="lang-btn">中文</button>
+        <div id="lang-dropdown" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 消息区域 -->
+  <div id="message-area">
+    <div id="message-list"></div>
+    <div id="scroll-anchor"></div>
+  </div>
+
+  <!-- 选项按钮区域 -->
+  <div id="choice-area"></div>
+
+  <!-- 文本输入区域 -->
+  <div id="input-area" style="display:none;">
+    <input type="text" id="text-input" placeholder="输入内容..." autocomplete="off">
+    <button id="input-submit">发送</button>
+  </div>
+
+  <!-- 设置遮罩层（首次游戏） -->
+  <div id="setup-overlay">
+    <div class="setup-container">
+      <div id="setup-content"></div>
+    </div>
+  </div>
+
+  <!-- 设置面板 -->
+  <div id="settings-overlay" class="hidden">
+    <div class="settings-panel">
+      <div class="settings-title">设 置</div>
+
+      <div class="settings-group">
+        <label class="settings-label">字体大小</label>
+        <div class="settings-row" id="setting-fontsize">
+          <button data-value="small">小</button>
+          <button data-value="medium" class="active">中</button>
+          <button data-value="large">大</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label">消息速度</label>
+        <div class="settings-row" id="setting-speed">
+          <button data-value="800">快</button>
+          <button data-value="1500" class="active">正常</button>
+          <button data-value="3500">慢</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label">快速模式（跳过所有等待）</label>
+        <div class="settings-row" id="setting-fastmode">
+          <button data-value="false" class="active">关闭</button>
+          <button data-value="true">开启</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label">消息淡入动画</label>
+        <div class="settings-row" id="setting-animation">
+          <button data-value="true" class="active">开启</button>
+          <button data-value="false">关闭</button>
+        </div>
+      </div>
+
+      <div class="settings-divider"></div>
+
+      <button id="settings-restart" class="settings-restart-btn">重新开始游戏</button>
+      <button id="settings-close" class="settings-close-btn">关闭</button>
+    </div>
+  </div>
+</div>
+
+<!-- 游戏数据：默认加载中文 -->
+<script src="data/strings_cn.js"></script>
+<script src="data/waypoints_cn.js"></script>
+<script src="data/categories_cn.js"></script>
+
+<!-- 应用脚本 -->
+<script src="js/storage.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
